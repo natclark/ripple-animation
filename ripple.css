@@ -1,0 +1,64 @@
+@media (prefers-reduced-motion: reduce) {
+    * {
+        -webkit-transition-property: none;
+        -moz-transition-property: none;
+        transition-property: none;
+    }
+}
+span.ripple {
+    background-color: rgba(255, 255, 255, .5);
+    border-radius: 50%;
+    height: 0;
+    opacity: 1;
+    position: absolute;
+    transform: scale(0);
+    width: 0;
+    will-change: opacity, transform;
+}
+@-webkit-keyframes ripple {
+    100% {
+        opacity: 0;
+        transform: scale(2);
+    }
+}
+@-moz-keyframes ripple {
+    100% {
+        opacity: 0;
+        transform: scale(2);
+    }
+}
+@keyframes ripple {
+    100% {
+        opacity: 0;
+        transform: scale(2);
+    }
+}
+.ripple {
+    animation: ripple .5s linear;
+}
+
+/* Styles for example button */
+body {
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+}
+button {
+    background-color: #000;
+    border: 0;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+    font-family:'Segoe UI', sans-serif;
+    font-size: 1.5em;
+    overflow: hidden;
+    padding: 8px;
+    position: relative;
+    width: 200px;
+}
+button:hover {
+    background-color: #222;
+}
+button:focus {
+    outline: 0;
+}
