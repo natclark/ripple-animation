@@ -8,8 +8,6 @@ const r = (e) => {
     const ripple = document.createElement(`span`);
     e.target.appendChild(ripple);
 
-    console.log(e.target.pageY, e.target.offsetLeft);
-
     ripple.style = `
         height: ${height}px !important;
         left: ${e.pageX - e.target.offsetLeft - width / 2}px !important;
